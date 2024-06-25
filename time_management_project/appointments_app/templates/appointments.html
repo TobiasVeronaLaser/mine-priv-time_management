@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Appointments</h1>
+<p>Welcome to my appointments page!</p>
+<ul>
+    {% for appointment in appointments %}
+        <li><a href="details/{{ appointment.id }}">{{ appointment.name }}</a></li>
+    {% endfor %}
+</ul>   
+
+</body>
+</html>
