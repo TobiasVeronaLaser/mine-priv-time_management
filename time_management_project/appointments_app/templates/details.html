@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
+{% extends 'master.html' %}
 
-<body>
+{% block title%}
+    Appointments - details
+{% endblock %}
 
-<h1>{{ appointment.name }}</h1>
-
-<p>description: {{ appointment.description }}</p>
-
-<p>Back to <a href="/appointments">Appointments</a></p>
-
-</body>
-</html>
+{% block content %}
+    <h1>{{ appointment.name }}</h1>
+    <p>description: {{ appointment.description }}</p>
+    <p>Back to <a href="/appointments">Appointments</a></p>
+{% endblock %}

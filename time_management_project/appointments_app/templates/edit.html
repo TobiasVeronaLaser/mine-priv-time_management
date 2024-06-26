@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    Appointment edit
+{% endblock %}
+
+{% block content %}
+    <form>
+        {% for key in appointment}
+            <label>{{ key }}</label>
+            <input type="text" text="{{ appointment[key] }}"/>
+        {% endfor %}
+    </form>
+{% endblock %}
+

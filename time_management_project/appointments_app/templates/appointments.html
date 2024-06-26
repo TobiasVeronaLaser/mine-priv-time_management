@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends 'master.html' %}
 
-<h1>Appointments</h1>
-<p>Welcome to my appointments page!</p>
-<ul>
-    {% for appointment in appointments %}
-        <li><a href="details/{{ appointment.id }}">{{ appointment.name }}</a></li>
-    {% endfor %}
-</ul>   
+{% block title %}
+    Appointments
+{% endblock %}
 
-</body>
-</html>
+{% block content %}
+    <h1>Appointments</h1>
+    <p>Welcome to my appointments page!</p>
+
+    <ul>
+        {% for appointment in appointments %}
+            <li><a href="details/{{ appointment.id }}">{{ appointment.name }}</a></li>
+        {% endfor %}
+    </ul>   
+{% endblock %}
